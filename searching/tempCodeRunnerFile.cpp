@@ -1,0 +1,1 @@
+if (binary_search(arr, arr + size, 7))

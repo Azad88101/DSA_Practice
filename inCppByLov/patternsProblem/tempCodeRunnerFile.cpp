@@ -1,6 +1,4 @@
-  cout << "*";
-        for (int k = 0; k < i; k++)
-        {
-
-          cout<<" ";
-        }
+   // for (int revno = i+numbers+1; revno >0; revno--)
+        // {
+        //     cout<<revno;
+        // }
