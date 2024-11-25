@@ -18,7 +18,7 @@ int peakIndex(vector<int> arr)
             e = mid;
         }
     }
-    return s;
+    return arr[s];
 }
 int main(int argc, char const *argv[])
 {
