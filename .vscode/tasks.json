@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build QspiralSelf",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/Arrays/2D array/QspiralSelf.cpp",
+                "-o",
+                "${workspaceFolder}/Arrays/2D array/QspiralSelf.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiles QspiralSelf.cpp into an executable"
+        }
+    ]
+}
