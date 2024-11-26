@@ -16,14 +16,14 @@ int elemNsorteArr(vector<int> arr, int target)
 
             return mid;
         }
-        else if (arr[mid-1] == target)
+        else if (mid-1>=0&&arr[mid-1] == target)
         {
             return mid-1;
             
         }
-        else if (arr[mid+1] == target)
+        else if (mid+1<arr.size()&&arr[mid+1] == target)
         {
-            return mid+1;
+            return mid+1; 
             
         }
         else if (arr[mid]<target)
@@ -35,11 +35,12 @@ int elemNsorteArr(vector<int> arr, int target)
             e = mid - 2;
         }
     }
+    return -1;
 }
 int main(int argc, char const *argv[])
 {
     vector<int> arr{10,3,40,20,50,80,70};
-    int target = 70;
+    int target = 40;
     int index  = elemNsorteArr(arr, target);
     cout<<index;
 
