@@ -9,18 +9,23 @@ vector<int> binarySearchIn2d(vector<vector<int>> arr, int target)
     int s = 0;
     int e = row * col - 1;
     int mid = s + (e - s) / 2;
+
+    int rowIndex = mid / col;
+    int colIindex = mid % col;
+    int element = arr[rowIndex][colIindex];
+    vector<int> values{element, rowIndex, colIindex, mid};
     while (s < e)
     {
         mid = s + (e - s) / 2;
-        int rowIndex = mid / col;
-        int colIindex = mid % col;
-        int element = arr[rowIndex][colIindex];
+        rowIndex = mid / col;
+        colIindex = mid % col;
+        element = arr[rowIndex][colIindex];
         // if (arr[mid / col][mid % col] == target)
 
         // if (arr[rowIndex][colIindex] == target)
         if (element == target)
         {
-            vector<int> values{element, rowIndex, colIindex, mid};
+            values = {element, rowIndex, colIindex, mid};
             // return mid;
             return values;
         }
@@ -34,7 +39,7 @@ vector<int> binarySearchIn2d(vector<vector<int>> arr, int target)
             e = mid - 1;
         }
     }
-    // return -1;
+    return values = {-1, -1, -1, -1};
 }
 
 int main(int argc, char const *argv[])
@@ -47,6 +52,7 @@ int main(int argc, char const *argv[])
         {17, 18, 19, 20}};
 
     int target;
+    cout << "enter your target bt 1 to 20";
     cin >> target;
     vector<int> value = binarySearchIn2d(arr, target);
 
@@ -60,10 +66,18 @@ int main(int argc, char const *argv[])
     //     cout << index;
     // }
 
-    cout << "element you searched " << value[0] << endl;
-    cout << "row index " << value[1] << endl;
-    cout << "column index " << value[2] << endl;
-    cout << "linear Index " << value[3] << endl;
+    if (value[0] == -1)
+    {
+        cout << " wrong search";
+    }
+    else
+    {
+
+        cout << "element you searched " << value[0] << endl;
+        cout << "row index " << value[1] << endl;
+        cout << "column index " << value[2] << endl;
+        cout << "linear Index " << value[3] << endl;
+    }
 
     return 0;
 }
