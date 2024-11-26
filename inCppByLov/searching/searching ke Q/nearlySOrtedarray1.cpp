@@ -28,11 +28,11 @@ int elemNsorteArr(vector<int> arr, int target)
         }
         else if (arr[mid]<target)
         {
-            s = mid + 1;
+            s = mid + 2;
         }
         else
         {
-            e = mid - 1;
+            e = mid - 2;
         }
     }
 }
