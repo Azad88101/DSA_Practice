@@ -52,7 +52,7 @@ int main(int argc, char const *argv[])
         {17, 18, 19, 20}};
 
     int target;
-    cout << "enter your target bt 1 to 20";
+    cout << "enter your target bt 1 to 20 " << endl;
     cin >> target;
     vector<int> value = binarySearchIn2d(arr, target);
 
@@ -68,7 +68,7 @@ int main(int argc, char const *argv[])
 
     if (value[0] == -1)
     {
-        cout << " wrong search";
+        cout << "wrong search"<<endl;
     }
     else
     {
