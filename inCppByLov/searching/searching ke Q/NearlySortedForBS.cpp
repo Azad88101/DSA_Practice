@@ -28,7 +28,7 @@ int nearlySorted(vector<int> arr, int target)
         else
         {
             e = mid - 1;
-            ;
+            
         }
     }
 }

@@ -33,7 +33,8 @@ int findPivot(vector<int> ans)
 }
 int main(int argc, char const *argv[])
 {
-    vector<int> arr{9, 10, 2, 4, 6, 8};
-    findPivot(arr);
+    vector<int> arr{3,3,3};
+  int idx=  findPivot(arr);
+  std::cout << "  index  " << idx<< " ,  value is  "<< arr[idx]<< std::endl;
     return 0;
 }
