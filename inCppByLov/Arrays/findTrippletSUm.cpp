@@ -4,7 +4,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     vector<int> a{10, 20, 30, 40,50};
-    int sum = 90;
+    int sum = 80;
     for (int i = 0; i < a.size(); i++)
     {
         for (int j = i + 1; j < a.size(); j++)
