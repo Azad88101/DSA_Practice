@@ -20,10 +20,7 @@ int firstReapeting(vector<int> arr)
     // }
     // return -1;
 
-
-
     ////////////////////////////2222222222222222222222222
-    
 }
 
 int main(int argc, char const *argv[])

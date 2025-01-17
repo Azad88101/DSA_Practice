@@ -12,8 +12,8 @@ int findQ(int a, int b)
         mid = s + (e - s) / 2;
         if (abs(b * mid) == abs(a))
         {
-          store = mid;
-          break;
+            store = mid;
+            break;
         }
         else if (abs(b * mid) > abs(a))
         {
@@ -43,22 +43,19 @@ int main(int argc, char const *argv[])
     int divident = -13;
     int divisior = -3;
     float ans = findQ(divident, divisior);
-    float temp=0;
+    float temp = 0;
     // temp =abs(ans);
     // cout << ans;
     float steps = 0.1;
     for (int i = 0; i < 4; i++)
     {
-        for (float j = ans; j*divisior < divident; j=j+steps)
+        for (float j = ans; j * divisior < divident; j = j + steps)
         {
-           ans = j;
+            ans = j;
         }
-        steps = steps/10;
-        
-        
+        steps = steps / 10;
     }
     cout << ans;
 
-    
     return 0;
 }
