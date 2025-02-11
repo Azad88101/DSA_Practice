@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <climits>
 using namespace std;
-
-string reorgnise(string s)
+// metjod 1 i mak thiss  using two pointer approach
+string reorgnise1(string s)
 {
+
     if (s.length() == 1)
     {
         return s;
@@ -24,30 +26,46 @@ string reorgnise(string s)
         // if (s[l] != s[i])
         else
         {
-            
 
             l++;
             i++;
         }
     }
 
-
     for (int i = 0; i < s.length(); i++)
     {
-       if (s[i]==s[i+1])
-       {
-       return "";
-       }
-       
+        if (s[i] == s[i + 1])
+        {
+            return "";
+        }
     }
-    
+
     return s;
 }
+// method 2 by bubbor
+string reorgnise2(string s)
+{
+
+    int hash[26] = {0};
+    for (int i = 0; i < s.length(); i++)
+    {
+        hash[s[i] - 'a']++;
+    }
+
+    char most_frequent;
+
+    int frequency = INT_MIN;
+    for (int i = 0; i < s.length(); i++)
+    {
+        /* code */
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     string s = "baaba";
 
-    string ans = reorgnise(s);
+    string ans = reorgnise2(s);
     cout << ans;
     return 0;
 }
