@@ -1,4 +1,4 @@
-  // for (auto a : ans)
+  // if (k == 1)
     // {
-    //     cout << a << "   ";
+    //     return e;
     // }
