@@ -66,10 +66,10 @@ public:
 
     //  destructor
     // delete key word use kya to ye bhi call ho jayge dyanmic me line 145
-    ~hero()
-    {
-        cout << "desturcot  called  << statuc ke liye   \n";
-    }
+    // ~hero()
+    // {
+    //     cout << "desturcot  called  << statuc ke liye   \n";
+    // }
 
     // most of the cases me devvelopment esi hi hoti ha
     // public:
